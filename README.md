@@ -7,3 +7,4 @@
 | 543 | [Kth Largest in N Arrays](http://www.lintcode.com/en/problem/kth-largest-in-n-arrays/) | [CPlusPlus](https://github.com/yuanhui-yang/LintCode-Online-Judge/blob/master/kth-largest-in-n-arrays.cpp) | Easy |
 | | [Connecting Graph](http://www.lintcode.com/en/problem/connecting-graph/) | [CPlusPlus](https://github.com/yuanhui-yang/LintCode-Online-Judge/blob/master/connecting-graph.cpp) |  |
 | | [Connecting Graph II](http://www.lintcode.com/en/problem/connecting-graph-ii/) | [CPlusPlus](https://github.com/yuanhui-yang/LintCode-Online-Judge/blob/master/connecting-graph-ii.cpp) |  |
+| | [Connecting Graph III](http://www.lintcode.com/en/problem/connecting-graph-iii/) | [CPlusPlus](https://github.com/yuanhui-yang/LintCode-Online-Judge/blob/master/connecting-graph-iii.cpp) |  |
