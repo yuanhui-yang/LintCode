@@ -1,4 +1,4 @@
-// 5. Kth Largest Element Medium
+// 5. Kth Largest Element
 // http://www.lintcode.com/en/problem/kth-largest-element/
 // Find K-th largest element in an array.
 // Notice
@@ -33,5 +33,6 @@ int main(void) {
 	assert(4 == solution.kthLargestElement(3, nums));
 	nums = {1, 2, 3, 4, 5};
 	assert(5 == solution.kthLargestElement(1, nums));
+	cout << "\nPassed All\n";
 	return 0;
 }
