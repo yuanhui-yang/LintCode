@@ -6,6 +6,7 @@
 | 201 | [Segment Tree Build](http://www.lintcode.com/en/problem/segment-tree-build/) | [CPlusPlus](https://github.com/yuanhui-yang/LintCode/blob/master/segment-tree-build.cpp) | Medium |
 | 202 | [Segment Tree Query](http://www.lintcode.com/en/problem/segment-tree-query/) | [CPlusPlus](https://github.com/yuanhui-yang/LintCode/blob/master/segment-tree-query.cpp) | Medium |
 | 203 | [Segment Tree Modify](http://www.lintcode.com/en/problem/segment-tree-modify/) | [CPlusPlus](https://github.com/yuanhui-yang/LintCode/blob/master/segment-tree-modify.cpp) | Medium |
+| 247 | [Segment Tree Query II](http://www.lintcode.com/en/problem/segment-tree-query-ii/) | [CPlusPlus](https://github.com/yuanhui-yang/LintCode/blob/master/segment-tree-query-ii.cpp) | Medium |
 | 382 | [Triangle Count](http://www.lintcode.com/en/problem/triangle-count/) | [CPlusPlus](https://github.com/yuanhui-yang/LintCode/blob/master/triangle-count.cpp) | Hard |
 | 443 | [Two Sum II](http://www.lintcode.com/en/problem/two-sum-ii/) | [CPlusPlus](https://github.com/yuanhui-yang/LintCode/blob/master/two-sum-ii.cpp) | Medium |
 | 461 | [Kth Smallest Numbers in Unsorted Array](http://www.lintcode.com/en/problem/kth-smallest-numbers-in-unsorted-array/) | [CPlusPlus](https://github.com/yuanhui-yang/LintCode/blob/master/kth-smallest-numbers-in-unsorted-array.cpp) | Medium |
