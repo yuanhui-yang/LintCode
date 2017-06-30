@@ -72,13 +72,9 @@ public:
         if (index <= mid) {
             modify(root->left, index, value);
         }
-        else if (index >= mid + 1) {
+        else {
             modify(root->right, index, value);
         }
-        else {
-            modify(root->left, index, value);
-            modify(root->right, index, value);   
-        }
-        root->max = max(root->left->max,  root->right->max);
+        root->max = max(root->left ? root->left->max : INT_MIN, root->right ? root->right->max : INT_MIN);
     }
 };
