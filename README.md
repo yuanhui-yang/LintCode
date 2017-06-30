@@ -8,6 +8,7 @@
 | 203 | [Segment Tree Modify](http://www.lintcode.com/en/problem/segment-tree-modify/) | [CPlusPlus](https://github.com/yuanhui-yang/LintCode/blob/master/segment-tree-modify.cpp) | Medium |
 | 205 | [Interval Minimum Number](http://www.lintcode.com/en/problem/interval-minimum-number/) | [CPlusPlus](https://github.com/yuanhui-yang/LintCode/blob/master/interval-minimum-number.cpp) | Medium |
 | 206 | [Interval Sum](http://www.lintcode.com/en/problem/interval-sum/) | [CPlusPlus](https://github.com/yuanhui-yang/LintCode/blob/master/interval-sum.cpp) | Medium |
+| 207 | [Interval Sum II](http://www.lintcode.com/en/problem/interval-sum-ii/) | [CPlusPlus](https://github.com/yuanhui-yang/LintCode/blob/master/interval-sum-ii.cpp) | Hard |
 | 247 | [Segment Tree Query II](http://www.lintcode.com/en/problem/segment-tree-query-ii/) | [CPlusPlus](https://github.com/yuanhui-yang/LintCode/blob/master/segment-tree-query-ii.cpp) | Medium |
 | 382 | [Triangle Count](http://www.lintcode.com/en/problem/triangle-count/) | [CPlusPlus](https://github.com/yuanhui-yang/LintCode/blob/master/triangle-count.cpp) | Hard |
 | 439 | [Segment Tree Build II](http://www.lintcode.com/en/problem/segment-tree-build-ii/) | [CPlusPlus](https://github.com/yuanhui-yang/LintCode/blob/master/segment-tree-build-ii.cpp) | Medium |
