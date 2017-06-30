@@ -57,7 +57,7 @@ public:
         if (start < root->start or end > root->end) {
             return INT_MIN;
         }
-        if (start == root->start and end == root->end) {
+        if (start <= root->start and end >= root->end) {
             return root->max;
         }
         int mid = root->start + (root->end - root->start) / 2;
