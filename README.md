@@ -10,6 +10,7 @@
 | 206 | [Interval Sum](http://www.lintcode.com/en/problem/interval-sum/) | [CPlusPlus](https://github.com/yuanhui-yang/LintCode/blob/master/interval-sum.cpp) | Medium |
 | 207 | [Interval Sum II](http://www.lintcode.com/en/problem/interval-sum-ii/) | [CPlusPlus](https://github.com/yuanhui-yang/LintCode/blob/master/interval-sum-ii.cpp) | Hard |
 | 247 | [Segment Tree Query II](http://www.lintcode.com/en/problem/segment-tree-query-ii/) | [CPlusPlus](https://github.com/yuanhui-yang/LintCode/blob/master/segment-tree-query-ii.cpp) | Medium |
+| 248 | [Count of Smaller Number](http://www.lintcode.com/en/problem/count-of-smaller-number/) | [CPlusPlus](https://github.com/yuanhui-yang/LintCode/blob/master/count-of-smaller-number.cpp) | Medium |
 | 382 | [Triangle Count](http://www.lintcode.com/en/problem/triangle-count/) | [CPlusPlus](https://github.com/yuanhui-yang/LintCode/blob/master/triangle-count.cpp) | Hard |
 | 439 | [Segment Tree Build II](http://www.lintcode.com/en/problem/segment-tree-build-ii/) | [CPlusPlus](https://github.com/yuanhui-yang/LintCode/blob/master/segment-tree-build-ii.cpp) | Medium |
 | 443 | [Two Sum II](http://www.lintcode.com/en/problem/two-sum-ii/) | [CPlusPlus](https://github.com/yuanhui-yang/LintCode/blob/master/two-sum-ii.cpp) | Medium |
