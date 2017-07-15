@@ -3,6 +3,7 @@
 | # | Title | Solution | Difficulty |
 | --- | --- | --- | --- |
 | 5 | [Kth Largest Element](http://www.lintcode.com/en/problem/kth-largest-element/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/kth-largest-element.cpp) | Medium |
+| 141 | [Sqrt(x)](http://www.lintcode.com/en/problem/sqrtx/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/sqrtx.cpp) | Easy |
 | 201 | [Segment Tree Build](http://www.lintcode.com/en/problem/segment-tree-build/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/segment-tree-build.cpp) | Medium |
 | 202 | [Segment Tree Query](http://www.lintcode.com/en/problem/segment-tree-query/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/segment-tree-query.cpp) | Medium |
 | 203 | [Segment Tree Modify](http://www.lintcode.com/en/problem/segment-tree-modify/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/segment-tree-modify.cpp) | Medium |
