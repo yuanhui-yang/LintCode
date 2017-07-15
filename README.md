@@ -18,6 +18,7 @@
 | 443 | [Two Sum II](http://www.lintcode.com/en/problem/two-sum-ii/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/two-sum-ii.cpp) | Medium |
 | 461 | [Kth Smallest Numbers in Unsorted Array](http://www.lintcode.com/en/problem/kth-smallest-numbers-in-unsorted-array/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/kth-smallest-numbers-in-unsorted-array.cpp) | Medium |
 | 543 | [Kth Largest in N Arrays](http://www.lintcode.com/en/problem/kth-largest-in-n-arrays/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/kth-largest-in-n-arrays.cpp) | Easy |
+| 586 | [Sqrt(x) II](http://www.lintcode.com/en/problem/sqrtx-ii/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/sqrtx-ii.cpp) | Medium |
 | 589 | [Connecting Graph](http://www.lintcode.com/en/problem/connecting-graph/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/connecting-graph.cpp) | Medium |
 | 590 | [Connecting Graph II](http://www.lintcode.com/en/problem/connecting-graph-ii/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/connecting-graph-ii.cpp) | Medium |
 | 591 | [Connecting Graph III](http://www.lintcode.com/en/problem/connecting-graph-iii/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/connecting-graph-iii.cpp) | Medium |
