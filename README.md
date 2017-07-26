@@ -17,6 +17,7 @@
 | 382 | [Triangle Count](http://www.lintcode.com/en/problem/triangle-count/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/triangle-count.cpp) | Hard |
 | 439 | [Segment Tree Build II](http://www.lintcode.com/en/problem/segment-tree-build-ii/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/segment-tree-build-ii.cpp) | Medium |
 | 443 | [Two Sum II](http://www.lintcode.com/en/problem/two-sum-ii/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/two-sum-ii.cpp) | Medium |
+| 448 | [Inorder Successor in Binary Search Tree](http://www.lintcode.com/en/problem/inorder-successor-in-binary-search-tree/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/inorder-successor-in-binary-search-tree.cpp) | Medium |
 | 461 | [Kth Smallest Numbers in Unsorted Array](http://www.lintcode.com/en/problem/kth-smallest-numbers-in-unsorted-array/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/kth-smallest-numbers-in-unsorted-array.cpp) | Medium |
 | 543 | [Kth Largest in N Arrays](http://www.lintcode.com/en/problem/kth-largest-in-n-arrays/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/kth-largest-in-n-arrays.cpp) | Easy |
 | 586 | [Sqrt(x) II](http://www.lintcode.com/en/problem/sqrtx-ii/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/sqrtx-ii.cpp) | Medium |
