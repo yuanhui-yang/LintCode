@@ -61,3 +61,26 @@ public:
 	}
 };
 // END: Selection Sort
+
+// BEGIN: Insertion Sort
+class Solution {
+public:
+	/*
+	 * @param A: an integer array
+	 * @return: 
+	 */
+	void sortIntegers(vector<int> & A) {
+		// write your code here
+		int i, j, curr, len = A.size();
+		for (i = 1; i < len; ++i) {
+			curr = A[i];
+			j = i - 1;
+			while (j >= 0 and A[j] > curr) {
+				A[j + 1] = A[j];
+				--j;
+			}
+			A[j + 1] = curr;
+		}
+	}
+};
+// END: Insertion Sort
