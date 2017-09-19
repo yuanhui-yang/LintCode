@@ -4,6 +4,7 @@
 | --- | --- | --- |
 | 5 | [Kth Largest Element](http://www.lintcode.com/en/problem/kth-largest-element/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/kth-largest-element.cpp) |
 | 13 | [strStr](http://www.lintcode.com/en/problem/strstr/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/strstr.cpp) |
+| 105 | [Copy List with Random Pointer](http://www.lintcode.com/en/problem/copy-list-with-random-pointer/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/copy-list-with-random-pointer.cpp), [Java](https://github.com/yuanhui-yang/LintCode/blob/master/copy-list-with-random-pointer.java) |
 | 141 | [Sqrt(x)](http://www.lintcode.com/en/problem/sqrtx/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/sqrtx.cpp) |
 | 201 | [Segment Tree Build](http://www.lintcode.com/en/problem/segment-tree-build/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/segment-tree-build.cpp) |
 | 202 | [Segment Tree Query](http://www.lintcode.com/en/problem/segment-tree-query/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/segment-tree-query.cpp) |
