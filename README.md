@@ -26,4 +26,5 @@
 | 589 | [Connecting Graph](http://www.lintcode.com/en/problem/connecting-graph/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/connecting-graph.cpp) |
 | 590 | [Connecting Graph II](http://www.lintcode.com/en/problem/connecting-graph-ii/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/connecting-graph-ii.cpp) |
 | 591 | [Connecting Graph III](http://www.lintcode.com/en/problem/connecting-graph-iii/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/connecting-graph-iii.cpp) |
+| 604 | [Window Sum](http://www.lintcode.com/en/problem/window-sum/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/window-sum.cpp), [Java](https://github.com/yuanhui-yang/LintCode/blob/master/window-sum.java)|
 | 629 | [Minimum Spanning Tree](http://www.lintcode.com/en/problem/minimum-spanning-tree/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/minimum-spanning-tree.cpp), [Java](https://github.com/yuanhui-yang/LintCode/blob/master/minimum-spanning-tree.java)|
