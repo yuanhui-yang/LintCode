@@ -19,23 +19,20 @@ public class Solution {
 	 * @return: the sum of the element inside the window at each moving.
 	 */
 	public int[] winSum(int[] nums, int k) {
-		if (nums == null || nums.length < k || k <= 0) {
+		if (nums == null || nums.length == 0 || k <= 0 || k > nums.length) {
 			return new int[0];
 		}
 		int len = nums.length, i = 0, j = 0, sum = 0;
 		int[] result = new int[len - k + 1];
-		while (i < len) {
+		for (i = 0, j = 0; i < len; ++i) {
 			sum += nums[i];
 			if (i == k - 1) {
-				result[j] = sum;
-				++j;
+				result[j++] = sum;
 			}
 			else if (i > k - 1) {
 				sum -= nums[i - k];
-				result[j] = sum;
-				++j;
+				result[j++] = sum;
 			}
-			++i;
 		}
 		return result;
 	}

@@ -21,23 +21,20 @@ public:
 	 * @return: the sum of the element inside the window at each moving.
 	 */
 	vector<int> winSum(vector<int> &nums, int k) {
-		int len = nums.size(), i = 0, j = 0, sum = 0;
-		if (len < k or k <= 0) {
-			return {};
+		if (nums.empty() or k <= 0 or nums.size() < k) {
+			return vector<int>();
 		}
-		vector<int> result(len - k + 1, 0);
-		while (i < len) {
+		int len = nums.size(), i = 0, j = 0, sum = 0;
+		vector<int> result(len - k + 1);
+		for (i = 0; i < len; ++i) {
 			sum += nums[i];
 			if (i == k - 1) {
-				result[j] = sum;
-				++j;
+				result[j++] = sum;
 			}
 			else if (i > k - 1) {
 				sum -= nums[i - k];
-				result[j] = sum;
-				++j;
+				result[j++] = sum;
 			}
-			++i;
 		}
 		return result;
 	}
