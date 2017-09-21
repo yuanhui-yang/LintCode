@@ -26,20 +26,20 @@ public class Solution {
 	 * @return: the maximum weight node
 	 */
 	public TreeNode findSubtree(TreeNode root) {
-		helper(root);
-		return result;
+		f(root);
+		return a;
 	}
-	private TreeNode result = null;
-	private int maxVal = Integer.MIN_VALUE;
-	private int helper(TreeNode root) {
-		if (root == null) {
+	private TreeNode a = null;
+	private int b = Integer.MIN_VALUE;
+	private int f(TreeNode node) {
+		if (node == null) {
 			return 0;
 		}
-		int leftVal = helper(root.left), rightVal = helper(root.right), currVal = leftVal + root.val + rightVal;
-		if (result == null || currVal > maxVal) {
-			result = root;
-			maxVal = currVal;
+		int left = f(node.left), right = f(node.right), sum = left + node.val + right;
+		if (sum > b) {
+			a = node;
+			b = sum;
 		}
-		return currVal;
+		return sum;
 	}
 }
