@@ -34,37 +34,34 @@ public class Solution {
 	 * @return a list of connections from results
 	 */
 	public List<Connection> lowestCost(List<Connection> connections) {
+		if (connections == null || connections.size() <= 1) {
+			return connections;
+		}
 		Collections.sort(connections, new Comp());
 		int n = 0;
-		Map<String, Integer> dict = new HashMap<String, Integer>();
+		HashMap<String, Integer> A = new HashMap<>();
 		for (Connection i : connections) {
-			if (!dict.containsKey(i.city1)) {
-				dict.put(i.city1, n);
-				++n;
+			if (!A.containsKey(i.city1)) {
+				A.put(i.city1, n++);
 			}
-			if (!dict.containsKey(i.city2)) {
-				dict.put(i.city2, n);
-				++n;
+			if (!A.containsKey(i.city2)) {
+				A.put(i.city2, n++);
 			}
 		}
-		int[] roots = new int[n];
+		int[] B = new int[n];
 		for (int i = 0; i < n; ++i) {
-			roots[i] = i;
+			B[i] = i;
 		}
 		List<Connection> result = new LinkedList<Connection>();
 		for (Connection i : connections) {
-			int label1 = dict.get(i.city1), label2 = dict.get(i.city2);
-			int root1 = getRoot(roots, label1), root2 = getRoot(roots, label2);
+			int id1 = A.get(i.city1), id2 = A.get(i.city2), root1 = f(B, id1), root2 = f(B, id2);
 			if (root1 != root2) {
 				--n;
-				roots[root1] = root2;
+				B[root1] = root2;
 				result.add(i);
 			}
 		}
-		if (n == 1) {
-			return result;
-		}
-		return new LinkedList<Connection>();
+		return n == 1 ? result : new LinkedList<Connection>();
 	}
 	private class Comp implements Comparator<Connection> {
 		public int compare(Connection a, Connection b) {
@@ -76,12 +73,13 @@ public class Solution {
 			}
 			return a.cost - b.cost;
 		}
-	}
-	private int getRoot(int[] roots, int id) {
-		if (id == roots[id]) {
+	};
+	private int f(int[] A, int id) {
+		if (A[id] == id) {
 			return id;
 		}
-		int result = getRoot(roots, roots[id]);
-		return roots[id] = result;
+		int result = f(A, A[id]);
+		A[id] = result;
+		return result;
 	}
 }
