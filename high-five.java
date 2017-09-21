@@ -27,25 +27,25 @@ public class Solution {
 	 * Map<Integer, Double> (student_id, average_score)
 	 */
 	public Map<Integer, Double> highFive(Record[] results) {
-		HashMap<Integer, PriorityQueue<Integer>> dict = new HashMap<>();
+		HashMap<Integer, PriorityQueue<Integer>> A = new HashMap<>();
 		for (Record i : results) {
-			if (!dict.containsKey(i.id)) {
-				dict.put(i.id, new PriorityQueue<Integer>());
+			if (!A.containsKey(i.id)) {
+				A.put(i.id, new PriorityQueue<Integer>(5));
 			}
-			dict.get(i.id).add(i.score);
-			if (dict.get(i.id).size() > 5) {
-				dict.get(i.id).poll();
+			PriorityQueue<Integer> pq = A.get(i.id);
+			pq.add(i.score);
+			if (pq.size() > 5) {
+				pq.poll();
 			}
 		}
 		Map<Integer, Double> result = new HashMap<>();
-		for (Map.Entry<Integer, PriorityQueue<Integer>> i : dict.entrySet()) {
-			int id = i.getKey();
-			PriorityQueue<Integer> scores = i.getValue();
-			double sum = 0, sz = (double)scores.size();
-			while (!scores.isEmpty()) {
-				sum += scores.poll();
+		for (Map.Entry<Integer, PriorityQueue<Integer>> i : A.entrySet()) {
+			PriorityQueue<Integer> pq = i.getValue();
+			double sum = 0, sz = pq.size();
+			while (!pq.isEmpty()) {
+				sum += pq.poll();
 			}
-			result.put(id, sum / sz);
+			result.put(i.getKey(), sum / sz);
 		}
 		return result;
 	}
