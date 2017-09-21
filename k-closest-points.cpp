@@ -22,8 +22,8 @@ return [[1,1],[2,5],[4,4]]
 
 Point c;
 struct Comp {
-	bool operator() (const Point & a, const Point & b) const {
-		int d1 = distance(a, c), d2 = distance(b, c);
+	bool operator() (const Point & a, const Point & b) {
+		int d1 = getDist(a, c), d2 = getDist(b, c);
 		if (d1 == d2) {
 			if (a.x == b.x) {
 				return a.y < b.y;
@@ -32,8 +32,8 @@ struct Comp {
 		}
 		return d1 < d2;
 	}
-	int distance(const Point & a, const Point & c) const {
-		return (a.x - c.x) * (a.x - c.x) + (a.y - c.y) * (a.y - c.y);
+	int getDist(const Point & a, const Point & b) {
+		return (a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y);
 	}
 };
 
@@ -46,8 +46,7 @@ public:
 	 * @return: the k closest points
 	 */
 	vector<Point> kClosest(vector<Point> points, Point origin, int k) {
-		c.x = origin.x;
-		c.y = origin.y;
+		c = origin;
 		priority_queue<Point, vector<Point>, Comp> pq;
 		for (const auto & i : points) {
 			pq.push(i);
@@ -58,8 +57,7 @@ public:
 		vector<Point> result(pq.size());
 		int i = pq.size();
 		while (!pq.empty()) {
-			--i;
-			result[i] = pq.top();
+			result[--i] = pq.top();
 			pq.pop();
 		}
 		return result;
