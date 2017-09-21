@@ -29,9 +29,6 @@ public class Solution {
 	 * @return: the k closest points
 	 */
 	public Point[] kClosest(Point[] points, Point origin, int k) {
-		if (points == null || points.length == 0 || origin == null || k <= 0) {
-			return null;
-		}
 		this.origin = origin;
 		PriorityQueue<Point> pq = new PriorityQueue<Point>(k, new Comp());
 		for (Point i : points) {
