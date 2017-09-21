@@ -25,28 +25,32 @@ public class Solution {
 	 * @return: A new head of a deep copy of the list.
 	 */
 	public RandomListNode copyRandomList(RandomListNode head) {
-		if(head == null) return null;
-
-		Map<RandomListNode, RandomListNode> map = new HashMap<>();
-		RandomListNode dummy = new RandomListNode(0);
-		RandomListNode cur = dummy;
-
-		while(head != null){
-			if(!map.containsKey(head)){
-				map.put(head, new RandomListNode(head.label));
-			}
-
-			if(head.random != null){
-				if(!map.containsKey(head.random)){
-					map.put(head.random, new RandomListNode(head.random.label));                 
-				}
-				map.get(head).random = map.get(head.random);
-			}            
-			
-			cur.next = map.get(head);
-			cur = cur.next;
-			head = head.next;
+		this.dict = new HashMap<RandomListNode, RandomListNode>();
+		RandomListNode dummy = new RandomListNode(-1), it = head, jt = dummy;
+		while (it != null) {
+			jt.next = f(it);
+			it = it.next;
+			jt = jt.next;
+		}
+		it = head;
+		jt = dummy.next;
+		while (it != null && jt != null) {
+			jt.random = f(it.random);
+			it = it.next;
+			jt = jt.next;
 		}
 		return dummy.next;
+	}
+	private HashMap<RandomListNode, RandomListNode> dict = null;
+	private RandomListNode f(RandomListNode node) {
+		if (node == null) {
+			return node;
+		}
+		if (dict.containsKey(node)) {
+			return dict.get(node);
+		}
+		RandomListNode result = new RandomListNode(node.label);
+		dict.put(node, result);
+		return result;
 	}
 }
