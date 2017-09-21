@@ -39,10 +39,7 @@ public class Solution {
 	 * @return: true if they are overlap or false
 	 */
 	public boolean doOverlap(Point l1, Point r1, Point l2, Point r2) {
-		if (r1.x < l2.x || r2.x < l1.x) {
-			return false;
-		}
-		if (l2.y < r1.y || l1.y < r2.y) {
+		if (r1.x < l2.x || r2.x < l1.x || l1.y < r2.y || l2.y < r1.y) {
 			return false;
 		}
 		return true;
