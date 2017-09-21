@@ -22,16 +22,15 @@ public class Solution {
 	 * @return: the length of the longest palindromes that can be built
 	 */
 	public int longestPalindrome(String s) {
-		// write your code here
-		Set<Character> hashSet = new HashSet<Character>();
+		HashSet<Character> A = new HashSet<>();
 		for (char ch : s.toCharArray()) {
-			if (hashSet.contains(ch)) {
-				hashSet.remove(ch);
+			if (A.contains(ch)) {
+				A.remove(ch);
 			}
 			else {
-				hashSet.add(ch);
+				A.add(ch);
 			}
 		}
-		return hashSet.isEmpty() ? s.length() : s.length() - hashSet.size() + 1;
+		return A.isEmpty() ? s.length() : s.length() - A.size() + 1;
 	}
 }
