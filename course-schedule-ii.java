@@ -24,44 +24,43 @@ public class Solution {
 	 * @return: the course order
 	 */
 	public int[] findOrder(int numCourses, int[][] prerequisites) {
-		// write your code here
-		int[] indegree = new int[numCourses];
-		Arrays.fill(indegree, 0);
-		ArrayList[] graph = new ArrayList[numCourses];
+		LinkedList[] A = new LinkedList[numCourses];
 		for (int i = 0; i < numCourses; ++i) {
-			graph[i] = new ArrayList<Integer>();
+			A[i] = new LinkedList<Integer>();
 		}
+		int[] B = new int[numCourses];
+		Arrays.fill(B, 0);
 		for (int[] i : prerequisites) {
-			++indegree[i[0]];
-			graph[i[1]].add(i[0]);
+			A[i[1]].add(i[0]);
+			++B[i[0]];
 		}
-		ArrayList<Integer> curr = new ArrayList<Integer>();
+		LinkedList<Integer> curr = new LinkedList<>(), C = new LinkedList<>();
 		for (int i = 0; i < numCourses; ++i) {
-			if (indegree[i] == 0) {
+			if (B[i] == 0) {
 				curr.add(i);
 			}
 		}
-		int[] result = new int[numCourses];
-		int id = 0;
 		while (!curr.isEmpty()) {
-			ArrayList<Integer> next = new ArrayList<Integer>();
+			LinkedList<Integer> next = new LinkedList<>();
 			for (Integer i : curr) {
-				result[id] = (int)i;
-				++id;
-				ArrayList<Integer> l = graph[(int)i];
-				for (Integer j : l) {
-					--indegree[(int)j];
-					if (indegree[(int)j] == 0) {
-						next.add((int)j);
+				C.add(i);
+				LinkedList<Integer> D = A[(int)i];
+				for (Integer j : D) {
+					--B[(int)j];
+					if (B[(int)j] == 0) {
+						next.add(j);
 					}
 				}
 			}
 			curr = next;
 		}
-		for (int i : indegree) {
-			if (i > 0) {
-				return new int[0];
-			}
+		if (C.size() != numCourses) {
+			return new int[0];
+		}
+		int[] result = new int[numCourses];
+		int i = 0;
+		for (Integer j : C) {
+			result[i++] = j;
 		}
 		return result;
 	}
