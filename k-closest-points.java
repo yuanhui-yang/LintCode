@@ -21,6 +21,17 @@ return [[1,1],[2,5],[4,4]]
  */
 
 
+/**
+ * Definition for a point.
+ * class Point {
+ *     int x;
+ *     int y;
+ *     Point() { x = 0; y = 0; }
+ *     Point(int a, int b) { x = a; y = b; }
+ * }
+ */
+
+
 public class Solution {
 	/*
 	 * @param points: a list of points
@@ -29,6 +40,9 @@ public class Solution {
 	 * @return: the k closest points
 	 */
 	public Point[] kClosest(Point[] points, Point origin, int k) {
+		if (points ==  null || points.length == 0 || origin == null || k <= 0) {
+			return new Point[0];
+		}
 		this.origin = origin;
 		PriorityQueue<Point> pq = new PriorityQueue<Point>(k, new Comp());
 		for (Point i : points) {
@@ -37,17 +51,17 @@ public class Solution {
 				pq.poll();
 			}
 		}
-		Point[] result = new Point[pq.size()];
-		int i = pq.size();
+		int n = pq.size();
+		Point[] result = new Point[n];
 		while (!pq.isEmpty()) {
-			result[--i] = pq.poll();
+			result[--n] = pq.poll();
 		}
 		return result;
 	}
+	private Point origin = null;
 	private class Comp implements Comparator<Point> {
-		@Override
 		public int compare(Point a, Point b) {
-			int d1 = getDist(a, origin), d2 = getDist(b, origin);
+			int d1 = f(a), d2 = f(b);
 			if (d2 == d1) {
 				if (b.x == a.x) {
 					return b.y - a.y;
@@ -56,9 +70,8 @@ public class Solution {
 			}
 			return d2 - d1;
 		}
-		private int getDist(Point a, Point b) {
-			return (a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y);
+		private int f(Point a) {
+			return (a.x - origin.x) * (a.x - origin.x) + (a.y - origin.y) * (a.y - origin.y);
 		}
 	}
-	private Point origin = null;
 }
