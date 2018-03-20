@@ -46,8 +46,6 @@ private:
             }
             else {
                 swap(A[i], A[j - 1]);
-                ++i;
-                --j;
             }
         }
         swap(A[begin], A[i - 1]);
