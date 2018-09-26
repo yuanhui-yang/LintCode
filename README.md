@@ -25,6 +25,7 @@
 | 463 | [Sort Integers](http://www.lintcode.com/en/problem/sort-integers/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/sort-integers.cpp) |
 | 464 | [Sort Integers II](http://www.lintcode.com/en/problem/sort-integers-ii/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/sort-integers-ii.cpp) |
 | 502 | [Mini Cassandra](https://www.lintcode.com/problem/mini-cassandra/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/mini-cassandra.cpp) |
+| 520 | [Consistent Hashing II](https://www.lintcode.com/problem/consistent-hashing-ii/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/consistent-hashing-ii.cpp) |
 | 543 | [Kth Largest in N Arrays](http://www.lintcode.com/en/problem/kth-largest-in-n-arrays/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/kth-largest-in-n-arrays.cpp) |
 | 586 | [Sqrt(x) II](http://www.lintcode.com/en/problem/sqrtx-ii/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/sqrtx-ii.cpp) |
 | 589 | [Connecting Graph](http://www.lintcode.com/en/problem/connecting-graph/) | [C++](https://github.com/yuanhui-yang/LintCode/blob/master/connecting-graph.cpp) |
