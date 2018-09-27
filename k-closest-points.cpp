@@ -20,6 +20,66 @@ return [[1,1],[2,5],[4,4]]
  * };
  */
 
+/**
+ * Definition for a point.
+ * struct Point {
+ *     int x;
+ *     int y;
+ *     Point() : x(0), y(0) {}
+ *     Point(int a, int b) : x(a), y(b) {}
+ * };
+ */
+
+struct Comp {
+    static Point origin;
+    bool operator() (const Point & a, const Point & b) {
+        int x = f(a, origin), y = f(b, origin);
+        if (x == y) {
+            if (a.x == b.x) {
+                return a.y < b.y;
+            }
+            else {
+                return a.x < b.x;
+            }
+        }
+        else {
+            return x < y;
+        }
+    }
+    int f(const Point & p, const Point & origin) {
+        return (p.x - origin.x) * (p.x - origin.x) + (p.y - origin.y) * (p.y - origin.y); 
+    }
+};
+
+Point Comp::origin = Point();
+
+class Solution {
+public:
+    /**
+     * @param points: a list of points
+     * @param origin: a point
+     * @param k: An integer
+     * @return: the k closest points
+     */
+    vector<Point> kClosest(vector<Point> &points, Point &origin, int k) {
+        // write your code here
+        Comp::origin = origin;
+        priority_queue<Point, vector<Point>, Comp> pq;
+        for (const auto & i : points) {
+            pq.push(i);
+            while (pq.size() > k) {
+                pq.pop();
+            }
+        }
+        vector<Point> result(pq.size());
+        while (!pq.empty()) {
+            result[pq.size() - 1] = pq.top();
+            pq.pop();
+        }
+        return result;
+    }
+};
+
 Point c;
 struct Comp {
 	bool operator() (const Point & a, const Point & b) {
