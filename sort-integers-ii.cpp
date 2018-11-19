@@ -6,10 +6,10 @@ public:
      */
     void sortIntegers2(vector<int> &A) {
         // write your code here
-        quick_sort(A, 0, A.size());
+        partial_sort(A, 0, A.size());
     }
 private:
-    void quick_sort(vector<int> &A, int begin, int end)
+    void partial_sort(vector<int> &A, int begin, int end)
     {
         int sz = end - begin;
         if (sz <= 1)
@@ -17,8 +17,8 @@ private:
             return;
         }
         int pivot = partition(A, begin, end);
-        quick_sort(A, begin, pivot);
-        quick_sort(A, pivot + 1, end);
+        partial_sort(A, begin, pivot);
+        partial_sort(A, pivot + 1, end);
     }
     int partition(vector<int> &A, int begin, int end)
     {
