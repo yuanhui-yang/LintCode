@@ -1,5 +1,51 @@
 class Solution {
 public:
+    /**
+     * @param A: an integer array
+     * @return: nothing
+     */
+    void sortIntegers2(vector<int> &A) {
+        // write your code here
+        quick_sort(A, 0, A.size());
+    }
+private:
+    void quick_sort(vector<int> &A, int begin, int end)
+    {
+        int sz = end - begin;
+        if (sz <= 1)
+        {
+            return;
+        }
+        int pivot = partition(A, begin, end);
+        quick_sort(A, begin, pivot);
+        quick_sort(A, pivot + 1, end);
+    }
+    int partition(vector<int> &A, int begin, int end)
+    {
+        int & pivot = A[begin];
+        int i = begin + 1, j = end - 1;
+        while (i <= j)
+        {
+            if (A[i] <= pivot)
+            {
+                ++i;
+            }
+            else if (A[j] >= pivot)
+            {
+                --j;
+            }
+            else
+            {
+                swap(A[i++], A[j--]);
+            }
+        }
+        swap(pivot, A[j]);
+        return j;
+    }
+};
+
+class Solution {
+public:
     /*
      * @param A: an integer array
      * @return: 
